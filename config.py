@@ -7,9 +7,9 @@ AUTHOR_ID and SERVER_ID can be easily copied if you enable the developer mode on
 To do that, go to `Settings` -> `Appearance` -> `Advanced` -> Enable `Developer Mode`.
 You should now be able to right click on server and user icons and select `Copy ID`.
 """
-AUTHOR_ID = "000000000000000000"  # It should be 18 digits in total
 AUTHORIZATION = ""
-SERVER = "000000000000000000"  # It should be 18 digits in total
+TARGET_AUTHOR_ID = "000000000000000000"  # It should be 18 digits in total
+TARGET_SERVER_ID = "000000000000000000"  # It should be 18 digits in total
 
 
 # Delete message properties
