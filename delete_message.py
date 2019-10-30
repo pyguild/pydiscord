@@ -16,7 +16,7 @@ while True:
     else:
         url = "https://discordapp.com/api/v6/guilds/%s/messages/search?author_id=%s&include_nsfw=true&offset=%s"
 
-    full_url = url % (SERVER, AUTHOR_ID, str(offset))
+    full_url = url % (TARGET_SERVER_ID, TARGET_AUTHOR_ID, str(offset))
     print(full_url)
     p = s.get(full_url)
 
@@ -51,7 +51,7 @@ while True:
                 offset += 1
                 continue
 
-            if message["author"]["id"] == AUTHOR_ID:
+            if message["author"]["id"] == TARGET_AUTHOR_ID:
                 d = s.delete("https://discordapp.com/api/v6/channels/%s/messages/%s"
                              % (message["channel_id"], message["id"]))
                 if d.status_code in acceptable_codes:
