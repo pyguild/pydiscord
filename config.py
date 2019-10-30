@@ -13,5 +13,10 @@ TARGET_SERVER_ID = "000000000000000000"  # It should be 18 digits in total
 
 
 # Delete message properties
-TO_DELETE_PINNED = False
+TO_DELETE_PINNED = False  # To delete pinned messages
+
+"""
+To delete direct messages, set this to true.
+TARGET_SERVER_ID is then required to set to the user id of the other party. 
+"""
 IS_DIRECT_MESSAGE = False

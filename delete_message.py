@@ -38,9 +38,11 @@ while True:
             current_timestamp = message_timestamp if current_timestamp == "" else current_timestamp
             pinned = message["pinned"]
 
+            # Ignore all the messages not authored by the target author
             if "hit" not in message or not message["hit"]:
                 continue
 
+            # This helps to keep your conversation going while the script deletes old messages
             if message_timestamp > current_timestamp:
                 offset += 1
                 continue
@@ -60,4 +62,5 @@ while True:
                     print("Error %d has occurred during delete." % d.status_code)
                     print(d.content)
                     exit(0)
+
                 time.sleep(0.1)
